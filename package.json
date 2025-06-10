@@ -1,0 +1,19 @@
+{
+  "name": "tauste-status-scraping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsx index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "eslint-config-getting-better": "^1.0.5",
+    "puppeteer": "^24.10.0",
+    "twilio": "^5.7.0"
+  }
+}

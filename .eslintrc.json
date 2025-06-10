@@ -1,0 +1,4 @@
+{
+  "extends": "eslint-config-getting-better",
+  "noConsole": false
+}
