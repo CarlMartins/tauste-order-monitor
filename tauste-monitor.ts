@@ -48,7 +48,7 @@ export class TausteMonitor {
       await this.accessOrderHistory();
       const status = await this.getLastOrderStatus();
 
-      if (status !== "A caminho") {
+      if (status.toLowerCase() !== "saiu para entrega") {
         setTimeout(checkStatus, this.checkInterval);
 
         return;
@@ -59,7 +59,7 @@ export class TausteMonitor {
       const twilioService = new TwilioService();
       await twilioService.sendSmsNotification();
 
-      return;
+      await this.close();
     };
 
     await checkStatus();
