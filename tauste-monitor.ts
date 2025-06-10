@@ -24,7 +24,7 @@ export class TausteMonitor {
   }
 
   public async initialize(): Promise<void> {
-    this.browser = await puppeteer.launch({ headless: false });
+    this.browser = await puppeteer.launch({ headless: false, slowMo: 20 });
     this.page = await this.browser.newPage();
     await this.page.goto(this.loginUrl);
     await this.login();
